@@ -21,10 +21,10 @@ fn main() {
     let args = Args::parse();
 
     let result = match args.operation.as_str() {
-        "add" => args.operand1 + args.operand2,
-        "subtract" => args.operand1 - args.operand2,
-        "multiply" => args.operand1 * args.operand2,
-        "divide" => {
+        "+" => args.operand1 + args.operand2,
+        "-" => args.operand1 - args.operand2,
+        "*" => args.operand1 * args.operand2,
+        "/" => {
             if args.operand2 != 0.0 {
                 args.operand1 / args.operand2
             } else {
